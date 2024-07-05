@@ -1,0 +1,541 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 800,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 540,
+	"windowMaxHeight": 32000,
+	"width": 960,
+	"height": 900,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onCloseBox",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 920,
+					"height": 860,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "objTabs",
+					"dataSourceTypeHint": "object",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 850,
+					"left": 30,
+					"width": 110,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "btnTrace"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information2": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 800,
+					"height": 470,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Input": {
+					"type": "input",
+					"left": 170,
+					"top": 360,
+					"width": 700,
+					"height": 20,
+					"dataSource": "Form:C1466.endPointURL",
+					"sizingY": "move"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Endpoint URL",
+					"top": 360,
+					"left": 30,
+					"width": 120,
+					"height": 20,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"sizingY": "move"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 170,
+					"top": 400,
+					"width": 700,
+					"height": 20,
+					"dataSource": "Form:C1466.employeeAPIKey",
+					"sizingY": "move"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "Employee API key",
+					"top": 400,
+					"left": 30,
+					"width": 120,
+					"height": 20,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"sizingY": "move"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 170,
+					"top": 440,
+					"width": 700,
+					"height": 20,
+					"dataSource": "Form:C1466.managerAPIKey",
+					"sizingY": "move"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Manager API key",
+					"top": 440,
+					"left": 30,
+					"width": 120,
+					"height": 20,
+					"textAlign": "right",
+					"fontWeight": "bold",
+					"sizingY": "move"
+				},
+				"information3": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 800,
+					"height": 250,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 800,
+					"height": 200,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSource": "Infos[2].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"List Box2": {
+					"type": "listbox",
+					"left": 110,
+					"top": 400,
+					"width": 315,
+					"height": 261,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.productsEmp",
+					"selectionMode": "none",
+					"headerHeight": "21px",
+					"focusable": false,
+					"rowHeight": "20px",
+					"scrollbarHorizontal": "hidden",
+					"sizingY": "move",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header5"
+							},
+							"name": "Column5",
+							"footer": {
+								"name": "Footer5"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.name",
+							"width": 200
+						},
+						{
+							"header": {
+								"text": "Price",
+								"name": "Header6"
+							},
+							"name": "Column6",
+							"footer": {
+								"name": "Footer6"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.price",
+							"width": 100,
+							"textAlign": "center"
+						}
+					]
+				},
+				"List Box3": {
+					"type": "listbox",
+					"left": 490,
+					"top": 400,
+					"width": 315,
+					"height": 261,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.productsManager",
+					"selectionMode": "none",
+					"headerHeight": "21px",
+					"focusable": false,
+					"rowHeight": "20px",
+					"scrollbarHorizontal": "hidden",
+					"sizingY": "move",
+					"columns": [
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header7"
+							},
+							"name": "Column7",
+							"footer": {
+								"name": "Footer7"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.name",
+							"width": 200
+						},
+						{
+							"header": {
+								"text": "Price",
+								"name": "Header8"
+							},
+							"name": "Column8",
+							"footer": {
+								"name": "Footer8"
+							},
+							"enterable": false,
+							"dataSource": "This:C1470.price",
+							"width": 100,
+							"textAlign": "center"
+						}
+					]
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Read products with the Manager API key",
+					"top": 370,
+					"left": 490,
+					"width": 300,
+					"height": 20,
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"stroke": "#6495ed",
+					"sizingY": "move"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 230,
+					"top": 740,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.productInfo.name",
+					"enterable": true,
+					"focusable": false,
+					"dataSourceTypeHint": "object",
+					"sizingY": "move"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Product name",
+					"top": 740,
+					"left": 90,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "right",
+					"sizingY": "move"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Create product (with the Manager API key)",
+					"top": 780,
+					"left": 460,
+					"width": 320,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"display": true,
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"sizingY": "move"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "Read products with the Employee API key",
+					"top": 370,
+					"left": 110,
+					"width": 300,
+					"height": 20,
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"stroke": "#6495ed",
+					"sizingY": "move"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 230,
+					"top": 780,
+					"width": 200,
+					"height": 20,
+					"dataSource": "Form:C1466.productInfo.price",
+					"enterable": true,
+					"focusable": false,
+					"dataSourceTypeHint": "object",
+					"sizingY": "move"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Product price",
+					"top": 780,
+					"left": 90,
+					"width": 120,
+					"height": 20,
+					"fontWeight": "bold",
+					"textAlign": "right",
+					"sizingY": "move"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Create a product",
+					"top": 700,
+					"left": 110,
+					"width": 200,
+					"height": 20,
+					"fontWeight": "bold",
+					"fontSize": 14,
+					"stroke": "#6495ed",
+					"sizingY": "move"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information4": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 800,
+					"height": 260,
+					"sizingX": "fixed",
+					"sizingY": "fixed",
+					"dataSource": "Infos[3].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 540,
+					"top": 530,
+					"width": 380,
+					"height": 340,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.response",
+					"scrollbarVertical": "visible",
+					"sizingY": "move"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "Result",
+					"top": 510,
+					"left": 540,
+					"width": 150,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#6495ed",
+					"sizingY": "move"
+				},
+				"RunRESTRequest1": {
+					"type": "input",
+					"left": 150,
+					"top": 510,
+					"width": 220,
+					"height": 80,
+					"enterable": true,
+					"focusable": false,
+					"dataSource": "Form:C1466.body",
+					"sizingY": "move"
+				},
+				"RunRESTRequest2": {
+					"type": "input",
+					"left": 80,
+					"top": 480,
+					"width": 650,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.createProductURL",
+					"sizingY": "move"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Run with the Employee API key",
+					"top": 420,
+					"left": 310,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm",
+					"focusable": false,
+					"sizingY": "move"
+				},
+				"RunRESTRequest3": {
+					"type": "input",
+					"left": 80,
+					"top": 390,
+					"width": 650,
+					"height": 20,
+					"enterable": false,
+					"focusable": false,
+					"dataSource": "Form:C1466.getProductURL",
+					"sizingY": "move"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Run with the Manager API key",
+					"top": 420,
+					"left": 530,
+					"width": 200,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"focusable": false,
+					"sizingY": "move"
+				},
+				"Button4": {
+					"type": "button",
+					"text": "Create with the Manager API key",
+					"top": 600,
+					"left": 80,
+					"width": 280,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button4.4dm",
+					"focusable": false,
+					"sizingY": "move"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "Body",
+					"top": 510,
+					"left": 80,
+					"width": 100,
+					"height": 20,
+					"fontWeight": "bold",
+					"stroke": "#6495ed",
+					"textAlign": "left",
+					"sizingY": "move"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"geometryStamp": 972
+}
